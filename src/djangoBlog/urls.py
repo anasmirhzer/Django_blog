@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from posts.views import BlogPostListPosts, BlogPostDetailPost, BlogPostAddPost, BlogPostUpdatePost,BlogPostDeletePost
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', BlogPostListPosts.as_view(), name='home'),
+    path('<str:slug>', BlogPostDetailPost.as_view(), name='post_details'),
+    path('/CreatePost', BlogPostAddPost.as_view(), name='add_post'),
+    path('<str:slug>/UpdatePost', BlogPostUpdatePost.as_view(), name='edit_post'),
+    path('<str:slug>/DeletePost', BlogPostDeletePost.as_view(), name='delete_post'),
 ]

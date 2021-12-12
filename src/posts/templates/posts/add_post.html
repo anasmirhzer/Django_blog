@@ -1,0 +1,13 @@
+{% extends 'posts/base.html' %}
+
+{% block title %}
+    <h1>{{ submit_text }}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="Submit" name="" id="" value="{{ submit_text }}">
+</form>
+{% endblock %}
