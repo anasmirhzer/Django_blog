@@ -5,32 +5,11 @@
 {% endblock %}
 
 {% block content %}
-<div id="article_details">
-            <p>
-                <h2>Author : {{ post.author|title }} </h2>
-            </p>
-            <p>
-                <h3>{{ post.category|title }} </h3>
-            </p>
-            <p>
-                <h2>Contenu:</h2>
-            </p>
-            <p>
-                {{ post.content }}
-            </p>
-            <p>
-                Creation date : {{ post.created_on }}
-            </p>
-            <p>
-                Last update time : {{ post.last_updated |date:"D d M Y"}} {{ post.last_updated|time:"H:i" }} {{ post.last_updated|time:"e" }}
-            </p>
-    </div>
-    <div class="actions_onlist">
-        {% if request.user.is_authenticated %}
-        <div>
-            <a href="{% url 'edit_post' slug=post.slug %}">Update Post</a>
-            <a href="{% url 'delete_post' slug=post.slug  %}">Delete Post</a>
-        </div>
-        {% endif %}
-    </div>
+    <article class="post-detail">
+
+        <h1> {{ post.title }}</h1>
+        <p>
+            {{ post.content }}
+        </p>
+    </article>
 {% endblock %}

@@ -1,15 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import "reset.css"; */
 
 body {
-    background-color: mintcrean ;
-    font-color : 'Raleway', sans-serif;
+    background-color: mintcream ;
+    font-family: 'Lato', sans-serif;
 }
 
-#nav_home {
+
+nav{
     margin: 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif;
+}
+
+nav > a {
+    text-decoration: none;
 }
 
 #blog {
@@ -17,6 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top : 5rem;
+    font-family: 'Lato', sans-serif;
 }
 
 #blog article {
@@ -56,4 +63,16 @@ body {
 
 .post-expert {
     margin-bottom : 1rem;
+}
+
+.post-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-detail > h1 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: 'Lato', sans-serif;
 }
