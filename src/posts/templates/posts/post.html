@@ -8,8 +8,12 @@
     <article class="post-detail">
 
         <h1> {{ post.title }}</h1>
+        {% if post.thumbnail %}
+            <img src="{{ post.thumbnail.url }} " alt="">
+        {% endif %}
         <p>
-            {{ post.content }}
+            {{ post.content|safe }}
         </p>
+        
     </article>
 {% endblock %}

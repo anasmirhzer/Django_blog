@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from posts.views import BlogPostListPosts, BlogPostDetailPost, BlogPostAddPost, BlogPostUpdatePost,BlogPostDeletePost
+from posts.views import BlogPostListPosts, BlogPostDetailPost, BlogPostAddPost, BlogPostUpdatePost, BlogPostDeletePost
+from djangoBlog import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,4 @@ urlpatterns = [
     path('CreatePost/', BlogPostAddPost.as_view(), name='add_post'),
     path('<str:slug>/UpdatePost', BlogPostUpdatePost.as_view(), name='edit_post'),
     path('<str:slug>/DeletePost', BlogPostDeletePost.as_view(), name='delete_post'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

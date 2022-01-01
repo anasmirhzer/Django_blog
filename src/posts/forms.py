@@ -11,6 +11,7 @@ class BlogPostForm(forms.ModelForm):
             "content",
             "published",
             "created_on",
+            "thumbnail",
         ]
 
         widgets = {

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import "reset.css"; */
+
+body {
+    background-color: mintcream ;
+    font-family: 'Lato', sans-serif;
+}
+
+
+nav{
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif;
+}
+
+nav > a {
+    text-decoration: none;
+}
+
+#blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top : 5rem;
+    font-family: 'Lato', sans-serif;
+}
+
+#blog article {
+    width: 50%;
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 1024px) {
+    #blog article {
+        width: 95%;
+    }
+}
+
+.post_title {
+    display: flex;
+    align-items: center;
+}
+
+.post_title a{
+    color: steelblue;
+    text-decoration: none;
+    margin-left: .5rem;
+}
+
+.post_title a:last-child {
+    color: red;
+}
+
+.post_title > div {
+    margin-left: auto;
+}
+
+.post-author {
+    margin: .5rem 0;
+}
+
+.post-expert {
+    margin-bottom : 1rem;
+}
+
+.post-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-detail > p {
+    line-height: 1.75;
+}
+
+.post-detail > h1 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+
+
+input, textarea {
+    display: block;
+    padding : 0.5rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 1rem;
+    min-width: 600px;
+}
+
+label {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 2rem;
+}
+
+.btn {  
+    padding: 1rem;
+    border: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn_submit {
+    background-color: steelblue;
+}
+
+.btn_delete {
+    background-color: indianred;
+}
