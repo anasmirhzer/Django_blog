@@ -129,3 +129,10 @@ dmypy.json
 .pyre/
 *.xml
 *.idea
+
+
+# env
+*env_django/
+
+# media
+*/mediafiles/*
