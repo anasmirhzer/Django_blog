@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form }}
     <input type="Submit" name="" id="" value="{{ submit_text }}" class="btn btn_submit">
