@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 @import "reset.css"; */
 
+
+
 body {
     background-color: mintcream ;
     font-family: 'Lato', sans-serif;
+    background-image: url("white-wallpaper-14.jpeg");
 }
 
 
@@ -16,6 +19,7 @@ nav{
 
 nav > a {
     text-decoration: none;
+    font-size: 14px;
 }
 
 #blog {
@@ -120,4 +124,8 @@ label {
 
 img {
     margin: 1rem;
+}
+
+h3 {
+    font-size: 20px
 }
